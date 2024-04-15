@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Watch Movies</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div id="container">
-      <nav>
-        <div>
-          <h1>Search Movies</h1>
-          <input type="text" id="search-movies" placeholder="Search for movies..." />
-        </div>
-      </nav>
-      <main>
-        <div id="movies-container" class="movies-container"></div>
-        <div id="pagination-container"></div>
-      </main>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <form action="" id="form">
+      <input type="text" id="search" class="search" placeholder="search">
+    </form>
+  </header>
 
-    <script src="./script.js"></script>
-  </body>
+  <div id="tags"></div>
+
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->  
+    <div class="overlay-content" id="overlay-content"></div>
+
+    <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a>
+    <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow">&#8658;</a>
+  
+  </div>
+
+
+  <main id="main"></main>
+  <div class="pagination">
+    <div class="page" id="prev">Previous Page</div>
+    <div class="current" id="current">1</div>
+    <div class="page" id="next">Next Page</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
